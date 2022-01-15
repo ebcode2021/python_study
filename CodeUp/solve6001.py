@@ -1,1 +1,2 @@
-print("hi")
+# 출력하기 1
+print("Hello")
