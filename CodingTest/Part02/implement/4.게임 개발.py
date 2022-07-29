@@ -20,7 +20,7 @@ while max_value != 0 :
     for i in range(4) :
         if dir + i >= 4 :
             dir -= 4
-        if dir + i < 0 :
+        elif dir + i < 0 :
             dir += 4
         new_x = x + direction[dir][0]
         new_y = y + direction[dir][1]
