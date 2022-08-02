@@ -38,10 +38,7 @@ def check_position(my_x, my_y) :
 
 def check_rotation(idx) :
     # 회전 키워드 확인
-    if direction_lists[0] == 'L' :
-        idx -= 1
-    else :
-        idx += 1
+    idx = idx - 1 if direction_lists[0] == 'L' else idx + 1
     # 인덱스 오버될 경우 인덱스 조정
     if idx > 3 :
         idx -= 4
