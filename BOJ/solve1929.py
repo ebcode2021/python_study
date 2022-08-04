@@ -14,3 +14,6 @@ m, n = map(int, input().split())
 
 for i in range(m, n + 1) :
 	check_decimal(i)
+
+# 에라토스테네스의 체 원리를 쓰면 더 느리지 않을까? 최적화..?
+# pypy3 에서는 통과되지만, python3 에서는 통과 ㄴㄴ 흐음...
