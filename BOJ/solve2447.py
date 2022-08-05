@@ -5,19 +5,19 @@ col = [['*' for col in range(n)] for row in range(n)]
 def isDec(n) :
 	idx = -1
 	while n > 1 :
-		n // 3
+		n /= 3
 		idx += 1
 	return (idx)
 
 def fibonacci(n) :
 	m = isDec(n)
-	print("?")
 	if n == 1 :
 		return
-	print(3 ** m)
 	for i in range(3 ** m) :
-		col[3 ** (m - 1) + i][3 ** (m - 1) + i] = ' '
+		for j in range(3 ** m) :
+			col[3 ** m + j][3 ** m + i] = ' '
 	n /= 3
+	fibonacci(n)
 
 fibonacci(n)
 
