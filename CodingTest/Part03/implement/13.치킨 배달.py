@@ -1,24 +1,12 @@
-from itertools import product, permutations, combinations
+# 도시 크기 n x n, 남길 치킨집 m
+city_size, future_kfc_size = map(int, input().split())
+city_data = []
+current_kfc_size = 0
 
-def chicken_distance(return_chicken, map) :
-	for _ in range(return_chicken) :
-		
-	return (distance)
+for _ in range (city_size) :
+	tmp_data = list(map(int, input().split()))
+	current_kfc_size += tmp_data.count(2)
+	city_data.append(tmp_data)
 
-size, chicken_shop_cnt = map(int, input().split())
-my_map = []
-chicken_location = []
-
-for i in range(size) :
-	my_map.append(list(map(int, input().split())))
-	while my_map[i].index(2) != -1 :
-		chicken_location.append([i, my_map[i].index(2)])
-
-return_chickens = list(permutations(chicken_location, chicken_shop_cnt))
-min_location = 99999
-
-for return_chicken in len(return_chickens) :
-	if min_location > chicken_distance(return_chicken, my_map) :
-		min_location = chicken_distance(return_chicken, my_map)
-
-print(min_location)
+print(city_data)
+print(current_kfc_size)
