@@ -20,5 +20,5 @@ min_location = 99999
 for return_chicken in len(return_chickens) :
 	if min_location > chicken_distance(return_chicken, my_map) :
 		min_location = chicken_distance(return_chicken, my_map)
- 
+
 print(min_location)
