@@ -8,6 +8,7 @@ kfc_locations = []
 chicken_distances = []
 
 # city_data 저장 및 kfc_locations, current_kfc_cnt 저장
+
 def basic_inform(city_size) :
 	global current_kfc_cnt
 
