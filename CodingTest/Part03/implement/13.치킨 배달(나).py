@@ -7,8 +7,6 @@ move_directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
 kfc_locations = []
 chicken_distances = []
 
-# city_data 저장 및 kfc_locations, current_kfc_cnt 저장
-
 def basic_inform(city_size) :
 	global current_kfc_cnt
 
@@ -24,11 +22,13 @@ def basic_inform(city_size) :
 
 def calc_chicken_distance(x, y, chicken_distance) :
 	for move_direction in move_directions :
+		if not ( 0 <= x + move_direction[0], y + move_direction[1] <= city_size) :
+			continue
 		if is_home(x + move_direction[0], y + move_direction[1]) :
 			return (chicken_distance)
 		else :
-			chicken_distance += 1
-			calc_chicken_distance(x + move_direction[0], y + move_direction[1], chicken_distances)
+			print(move_direction[0])
+			calc_chicken_distance(x + move_direction[0], y + move_direction[1], chicken_distances + 1)
 
 def is_home(move_x, move_y) :
 	if city_data[move_x][move_y] == 1 :
